@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Hall</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .dining-hall {
+            background-image: url('./dinning_hall_bg.jpeg'); 
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .friend, .student, .food {
+            position: absolute;
+            height: auto;
+        }
+
+        .friend {
+            position: absolute;
+            width: 10%; 
+            height: auto;
+            bottom: 5%; 
+            animation: floatAnimationFriend 7s linear infinite;
+            right: 20%; 
+        }
+        
+        .student {
+            position: absolute;
+            width: 15%; 
+            height: auto;
+            bottom: 5%; 
+            animation: floatAnimationStudent 7s linear infinite;
+            left: 20%; 
+        }
+
+        @keyframes floatAnimationFriend {
+            0%, 25%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-150%);
+            }
+        }
+        
+        @keyframes floatAnimationStudent {
+            0%, 25%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(150%);
+            }
+        }
+
+        .food {
+            width: 5%;
+            animation: floatRotateAnimationFood 8s linear infinite;
+        }
+
+        .food img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes floatRotateAnimationFood {
+            0%,100%{
+                transform: translateY(30%) rotate(0deg); 
+            }
+            25% {
+                transform: translateY(80%) rotate(45deg);
+            }
+            50% {
+                transform: translateY(100%) rotate(-90deg);
+            }
+            75%{
+                transform: translateY(190%) rotate(90deg);
+            }
+        }
+
+        .dropbtn {
+            background-color: #FFF6D8;
+            color: black;
+            font-family: "Eagle Lake";
+            padding: 1vw; 
+            font-size: 2vw; 
+            border: 0.5vw #1E139C solid; 
+            cursor: pointer;
+            width: 30vw; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .dropdown {
+            position: absolute;
+            top: 2vh; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 12vh; 
+            background-color: #FFF6D8;
+            border: 0.5vw #1E139C solid; 
+            min-width: 5vw; 
+            padding: 0.2vw; 
+            z-index: 1;
+        }
+        
+        .dropdown-content label {
+            color: black;
+            font-family: "Eagle Lake";
+            font-size: 1.5vw; 
+            padding: 3vw; 
+            text-decoration: none;
+            display: block;
+        }
+        
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .food input[type="checkbox"] {
+            display: none;
+        }
+
+        .food input[type="checkbox"]:checked + label::before {
+            content: "Added to the Basket!";
+            position: absolute;
+            top: -2vw; 
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FFF6D8;
+            padding: 1vw; 
+            border: 0.5vw solid #1E139C; 
+            border-radius: 0.5vw; 
+            font-family: "Eagle Lake";
+            font-size: 0.5vw; 
+            color: black;
+        }
+
+        .food label {
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="dining-hall">
+        <img src="./student.gif" alt="Student" class="student">
+        <img src="./friend.png" alt="Friend" class="friend">
+        <div class="food" style="left: 10%; top: 10%;">
+            <input type="checkbox" id="food1-checkbox">
+            <label for="food1-checkbox">
+                <img src="./download1.png" alt="Floating Food 1">
+            </label>
+        </div>
+        <div class="food" style="left: 20%; top: 30%;">
+            <input type="checkbox" id="food2-checkbox">
+            <label for="food2-checkbox">
+                <img src="./download2.png" alt="Floating Food 2">
+            </label>
+        </div>
+        <div class="food" style="left: 30%; top: 15%;">
+            <input type="checkbox" id="food3-checkbox">
+            <label for="food3-checkbox">
+                <img src="./download3.png" alt="Floating Food 3">
+            </label>
+        </div>
+        <div class="food" style="left: 50%; top: 30%;">
+            <input type="checkbox" id="food4-checkbox">
+            <label for="food4-checkbox">
+                <img src="./download4.png" alt="Floating Food 4">
+            </label>
+        </div>
+        <div class="food" style="left: 70%; top: 10%;">
+            <input type="checkbox" id="food5-checkbox">
+            <label for="food5-checkbox">
+                <img src="./download5.png" alt="Floating Food 5">
+            </label>
+        </div>
+        <div class="food" style="left: 85%; top: 25%;">
+            <input type="checkbox" id="food6-checkbox">
+            <label for="food6-checkbox">
+                <img src="./download6.png" alt="Floating Food 6">
+            </label>
+        </div>
+        <div class="food" style="left: 90%; top: 40%;">
+            <input type="checkbox" id="food7-checkbox">
+                <label for="food7-checkbox">
+                    <img src="./download7.png" alt="Floating Food 7">
+                </label>
+        </div>
+        <div class="food" style="left: 40%; top: 20%;">
+            <input type="checkbox" id="food8-checkbox">
+                <label for="food8-checkbox">
+                    <img src="./download8.png" alt="Floating Food 8">
+                </label>
+        </div>
+        <div class="food" style="left: 75%; top: 30%;">
+            <input type="checkbox" id="food10-checkbox">
+            <label for="food10-checkbox">
+                <img src="./download10.png" alt="Floating Food 10">
+            </label>
+        </div>
+        <div class="food" style="left: 40%; top: 40%;">
+            <input type="checkbox" id="food9-checkbox">
+            <label for="food9-checkbox">
+                <img src="./download9.png" alt="Floating Food 9">
+            </label>
+        </div>
+        <div class="food" style="left: 50%; top: 10%;">
+            <input type="checkbox" id="food12-checkbox">
+            <label for="food12-checkbox">
+                <img src="./download12-removebg-preview.png" alt="Floating Food 12">
+            </label>
+        </div>
+        <div class="food" style="left: 65%; top: 25%;">
+            <input type="checkbox" id="food13-checkbox">
+            <label for="food13-checkbox">
+                <img src="./download13-removebg-preview.png" alt="Floating Food 13">
+            </label>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Task</button>
+            <div class="dropdown-content">
+            <label > <input type = "checkbox">Pick the food by clicking on the food image</label>
+          </div>
+        </div>
+        
+    </div>
+</body>
+</html>

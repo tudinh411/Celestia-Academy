@@ -1,0 +1,152 @@
+body {
+	background-image: url("greenhouse2.png");
+        background-size: cover;
+        height: 100vh;
+	border: 2px solid transparent;
+        overflow: hidden;
+}
+
+
+img {
+	width: 55%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 30px;
+}
+
+.p1 {
+	border: 7px #1E139C solid;
+	background-color: #FFF6D8;
+	width: fit-content;
+	height: fit-content;
+	padding: 40px;
+	font-size: 17px;
+	font-family: 'Eagle Lake';
+	text-align: center;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.character img {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	margin-top: 12%;
+	margin-right: 80%;
+	animation: charmove 5s;
+	animation-fill-mode: forwards;
+	z-index: 2;
+}
+
+@keyframes charmove {
+	0% {transform: translate(-50px, 0px);}
+	100% {transform: translate(250px, -20px);}
+}
+
+.potion img {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	margin-left: 50%;
+	margin-top: 1%;
+	z-index: 1;
+	transition: width 5s;
+}
+
+
+.potion:hover img{
+	transform: scale(0.95);
+	animation: potionMove 2s infinite ease-in-out;
+	width: 255px;
+}
+
+@keyframes potionMove {
+	
+	0%{transform: rotate(25deg);}
+	50%{transform: rotate(-25deg);}
+	100%{transform: rotate(25deg);}
+}
+
+
+.brew img {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	left: 50vw;
+	bottom: 2vh;	
+}
+
+.animal img {
+	position: absolute;
+	width: 150px;
+	bottom: 20px;
+	z-index: -1;
+	animation: animalMove 10s;
+}
+
+.dropbtn {
+	background-color: #FFF6D8;
+	color: black;
+	font-family: "Eagle Lake";
+	padding: 16px;
+	font-size: 20px;
+	border: 7px #1E139C solid;
+	cursor: pointer;
+	width: 580px;
+
+}
+
+.dropdown {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 70px;
+	background-color: #FFF6D8;
+	border: 7px #1E139C solid;
+	min-width: 250px;
+	padding: 20px;
+	z-index: 1;
+}
+
+.dropdown-content label {
+	color: black;
+	font-family: "Eagle Lake";
+	font-size: 17px;
+	padding: 55px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
